@@ -1,0 +1,218 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  background: #E0D057;
+  background: -webkit-linear-gradient(top left, #E0D057, #4EB3AB);
+  background: -moz-linear-gradient(top left, #E0D057, #4EB3AB);
+  background: linear-gradient(to bottom right, #E0D057, #4EB3AB);
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  place-items: center;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+
+.joinChatContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  padding: 35px 25px;
+  background-color: rgb(232, 238, 250);
+  border-radius: 100%;
+  border: 5px #43a047 solid;
+}
+
+.joinChatContainer h3 {
+  font-size: 35px;
+  margin: 0 0 40px 0;
+  color: #43a047;
+}
+
+.joinChatContainer input {
+  min-width: 210px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 2px solid #43a047;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: all ease-in-out 0.2s;
+}
+
+.joinChatContainer input:focus{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  outline: none;
+  min-width: 250px;
+}
+
+.joinChatContainer button {
+  width: 225px;
+  height: 50px;
+  margin: 7px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background: #43a047;
+  color: #fff;
+  cursor: pointer;
+}
+
+.joinChatContainer button:hover {
+  background: #2e7d32;
+}
+
+.chat-window {
+  width: 350px;
+  height: 500px;
+  background: #43a047;
+}
+
+.chat-window p {
+  margin: 0;
+}
+.chat-window .chat-header {
+  height: 45px;
+  background: #43a047;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+.chat-window .chat-header svg {
+ color: white;
+ padding: 10px;
+}
+.chat-window .chat-header p {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.chat-window .chat-body {
+  height: calc(450px - (45px + 70px));
+  border: 1px solid #43a047;
+  background: #fff;
+  position: relative;
+}
+.chat-window .chat-body .message-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.chat-window .chat-body .message-container::-webkit-scrollbar {
+  display: none;
+}
+.chat-window .chat-body .message {
+  height: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.chat-window .chat-body .message .message-content {
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-width: 120px;
+  background-color: #43a047;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 7px;
+  padding-left: 7px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#you {
+  justify-content: flex-start;
+}
+
+#you .message-content {
+  justify-content: flex-start;
+}
+
+#you .message-meta {
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#other {
+  justify-content: flex-end;
+}
+
+#other .message-content {
+  justify-content: flex-end;
+  background-color: cornflowerblue;
+}
+
+#other .message-meta {
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.message-meta #author {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.chat-window .chat-body .message .message-meta {
+  display: flex;
+  font-size: 12px;
+}
+
+.chat-window .chat-footer {
+  margin-top: 20px;
+  height: 50px;
+  border: 1px solid #43a047;
+  border-top: none;
+  display: flex;
+  padding: 0 20px;
+}
+
+.chat-window .chat-footer input {
+  height: 100%;
+  flex: 85%;
+  border: 0;
+  padding: 0 0.7em;
+  font-size: 1em;
+  border-right: 1px dotted #607d8b;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.chat-window .chat-footer button {
+  border: 0;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex: 15%;
+  height: 100%;
+  background: #42dd4c;
+  outline: none;
+  font-size: 25px;
+  color: white;
+  border: 1px solid #42dd4c;
+  transition: all ease-in-out 0.6s;
+}
+
+.chat-window .chat-footer button:hover {
+  background: white;
+  border: 1px solid #43a047;
+  color: #43a047;
+}
+.hide {
+  opacity: 0 !important;
+}
